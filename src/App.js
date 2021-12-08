@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom'
 
-function App() {
+import UserRoute from './routes/UserRoute'
+import FrontEnd from './FrontEnd'
+import Top from './components/Top'
+import Login from './components/Login'
+import Home from './components/home'
+
+const App = () => {
+
+  const { REACT_APP_TIMELINE_HOST: timelineHost } = process.env || null
+
+  const TimelineApp = ({ history }) => (
+    <FrontEnd history={history} host={timelineHost ? timelineHost : 'http://localhost:3001'} name='Timeline' />
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Route path='/' component={Top} />
+      <UserRoute path='/' exact component={Home} />
+      <Route path='/login' exact component={Login} />
+      <UserRoute path='/timeline' exact component={TimelineApp} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
