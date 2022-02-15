@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Button } from 'semantic-ui-react'
 
 import LoginForm from './forms/login'
@@ -14,7 +15,7 @@ const Login = ({lan}) => {
     <div className='App centric full-vh'>
       <h2>{`${ui[lan][0]}, user`}</h2>
       <LoginForm pass={true}/>
-      <div className='oval-but'><Button fluid content='Button' /></div>
+    <div className='oval-but'><Button as={Link} to='/timeline' fluid content='Button' /></div>
     </div>
   )
 }
