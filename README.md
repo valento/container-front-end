@@ -7,7 +7,7 @@ CONTAINER is a static SPA and was bootstrapped with [Create React App](https://g
 In the project directory, you can run:
 ### `yarn dev`
 
-Runs th CONTAINER in development mode - rewiring is off!\
+Runs th CONTAINER in development mode - rewiring is off!
 
 ### `yarn start`
 
