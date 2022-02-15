@@ -1,14 +1,17 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Container for my Front-Ends:
+The CONTAINER logs a user and loads a Desktop of Apps the User has persmission/access to.
+CONTAINER is a static SPA and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+### `yarn dev`
+
+Runs th CONTAINER in development mode - rewiring is off!
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the production mode - rewired.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
